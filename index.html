@@ -3,51 +3,97 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/desktop/home-page.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet" />
 		<title>Ink Attitude, walk-in studio a Padova</title>
 	</head>
 	<body>
 		<header>
 			<h1>Ink Attitude</h1>
-			<!-- Image displacement -->
-			<p><span lang="en">walk-in tattoo studio</span></p>
+			<p class="subtitle"><strong>studio di tatuaggi</strong> <span lang="en">walk-in</span></p>
+			<p class="subtitle">A <strong>Padova</strong></p>
 		</header>
 		<section id="fast-infos">
-			<h2>Posizione</h2>
-			<p>Via Giambattista Belzoni 143, Padova</p>
-			<h2>Orari</h2>
-			<p>LUN, MAR - SAB | 11 to 20</p>
-			<p>MER | 11 to 22</p>
-			<h2>Contatti</h2>
-			<a href="https://www.instagram.com/inkattitude_tattoostudio/">@inkattitude_tattoostudio</a>
-			<a href="tel:+393755027462">3755027462</a>
+			<div>
+				<a href="https://www.google.it/maps/place/Ink+Attitude+Tattoo+Studio/@45.4071589,11.8892417,17z/data=!3m1!4b1!4m6!3m5!1s0x477edb37d4b03feb:0x5a92f8dd7396e1b3!8m2!3d45.4071552!4d11.8918166!16s%2Fg%2F11swwy9kx_?entry=ttu" id="map">Apri con google maps.</a>
+				<h2>Posizione</h2>
+				<p>Via Giambattista Belzoni 143 <strong>Portello</strong> a Padova</p>
+			</div>
+			<div>
+				<h2>Orari</h2>
+				<p>LUN, MAR - SAB | 11 to 20</p>
+				<p>MER | 11 to 22</p>
+				<h2>Contatti</h2>
+				<div>
+					<a class="icon" id="ig" href="https://www.instagram.com/inkattitude_tattoostudio/">@inkattitude_tattoostudio</a>
+					<a class="icon" id="pn" href="tel:+393755027462">3755027462</a>
+				</div>
+			</div>
 		</section>
 		<section id="crew">
-			<h2 lang="en">Crew</h2>
-			<div class="crew-member">
-				<h3>Stefan</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
-				<img src="https://picsum.photos/600/600" alt="" />
+			<h2 lang="en">Artists</h2>
+			<div class="scroller">
+				<div id="I" class="crew-member">
+					<h3>Stefan</h3>
+					<div class="description">
+						<img src="https://picsum.photos/600/600" alt="" />
+						<p>Lorem i adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
+					</div>
+					<ul aria-label="specializzazione" class="styles-array">
+						<li class="style traditional" lang="en">Traditional</li>
+					</ul>
+				</div>
+				<div id="II" class="crew-member">
+					<h3>Jacopo</h3>
+					<div class="description">
+						<img src="https://picsum.photos/600/600" alt="" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
+					</div>
+					<ul aria-label="specializzazione" class="styles-array">
+						<li class="style bw" lang="en">Black and white</li>
+					</ul>
+				</div>
+				<div id="III" class="crew-member">
+					<h3>Cogue</h3>
+					<div class="description">
+						<img src="https://picsum.photos/600/600" alt="" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
+					</div>
+					<ul aria-label="specializzazione" class="styles-array">
+						<li class="style traditional" lang="en">Traditional</li>
+					</ul>
+				</div>
+				<div id="IV" class="crew-member">
+					<h3>Damiano</h3>
+					<div class="description">
+						<img src="https://picsum.photos/600/600" alt="" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
+					</div>
+					<ul aria-label="specializzazione" class="styles-array">
+						<li class="style lettering" lang="en">Lettering</li>
+					</ul>
+				</div>
+				<div id="V" class="crew-member">
+					<h3>Louise</h3>
+					<div class="description">
+						<img src="https://picsum.photos/600/600" alt="" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
+					</div>
+					<ul aria-label="specializzazione" class="styles-array">
+						<li class="style traditional" lang="en">Traditional</li>
+					</ul>
+				</div>
 			</div>
-			<div class="crew-member">
-				<h3>Jacopo</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
-				<img src="https://picsum.photos/600/600" alt="" />
-			</div>
-			<div class="crew-member">
-				<h3>Cogue</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
-				<img src="https://picsum.photos/600/600" alt="" />
-			</div>
-			<div class="crew-member">
-				<h3>Damiano</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
-				<img src="https://picsum.photos/600/600" alt="" />
-			</div>
-			<div class="crew-member">
-				<h3>Louise</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officiis distinctio? Blanditiis tempora fuga molestiae quidem, reiciendis adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.</p>
-				<img src="https://picsum.photos/600/600" alt="" />
-			</div>
+			<ul>
+				<li><a href="#I">Stefan</a></li>
+				<li><a href="#II">Jacopo</a></li>
+				<li><a href="#III">Cogue</a></li>
+				<li><a href="#IV">Damiano</a></li>
+				<li><a href="#V">Luise</a></li>
+			</ul>
+			<a href="#portfolio" id="quick-portfolio-link">Galleria</a>
 		</section>
 		<section id="portfolio">
 			<div>
@@ -114,9 +160,11 @@
 				<a href="tel:+393755027462">3755027462</a>
 			</div>
 			<div id="legal">
-				<a href="./privacy-police.html">Privacy police</a>
+				<a href="./privacy-policy.html">Privacy police</a>
 				<a href="./service-terms.html">Terms of service</a>
 			</div>
+			<a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Gregor Cresnar - Flaticon</a>
+			<a href="https://www.flaticon.com/free-icons/image" title="image icons">Image icons created by hi_iconport - Flaticon</a>
 		</footer>
 	</body>
 </html>
