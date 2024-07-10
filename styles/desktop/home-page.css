@@ -18,30 +18,7 @@ a,
 a:visited {
 	color: #f6b254;
 }
-a.icon {
-	/* Box-size */
-	width: 50px;
-	height: 50px;
-	margin: 10px;
 
-	/* Borders */
-	border-radius: 50%;
-
-	/* Background */
-	background-size: 60% 60%;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	/* Text */
-	text-indent: -9999px;
-
-	/* Display */
-	display: block;
-
-	/* Transition */
-	/* Transition on background image is supported natively by Chrome, Opera and Safari. */
-	transition: all 0.3s ease-in-out;
-}
 a#map {
 	height: 55vh;
 	width: 55vh;
@@ -60,20 +37,6 @@ a#map {
 }
 a#map:hover {
 	background-size: auto 110%;
-}
-a#ig {
-	background-image: url("../../media/icons/video-inv.png");
-}
-a#ig:hover {
-	background-image: url("../../media/icons/video.png");
-	background-color: rgb(255, 255, 255);
-}
-a#pn {
-	background-image: url("../../media/icons/telephone-inv.png");
-}
-a#pn:hover {
-	background-image: url("../../media/icons/telephone.png");
-	background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -204,7 +167,6 @@ header {
 		padding: 3px;
 	}
 	> div.scroller {
-		
 		display: flex;
 		overflow-x: auto;
 		scroll-behavior: smooth;
@@ -228,7 +190,7 @@ header {
 				position: relative;
 				display: block;
 				padding: 30px 5px;
-				margin:0;
+				margin: 0;
 
 				border: 1px solid black;
 				border-width: 0 1px;
@@ -273,29 +235,28 @@ header {
 				flex-flow: column nowrap;
 				justify-content: end;
 				align-items: center;
-				margin:0;
-				li{
+				margin: 0;
+				li {
 					white-space: nowrap;
 					text-align: center;
 				}
-				li::before{
+				li::before {
 					content: "";
 					display: block;
-					width: 100px;
-					height: 100px;
-					padding: 10px;
-					
-					background-size: auto 90%;
+					width: 100%;
+					height: 120px;
+
+					background-size: contain;
 					background-position: center;
 					background-repeat: no-repeat;
 				}
-				li.traditional::before{
+				li.traditional::before {
 					background-image: url("../../media/icons/trad-style.png");
 				}
-				li.lettering::before{
+				li.lettering::before {
 					background-image: url("../../media/icons/lett-style.png");
 				}
-				li.bw::before{
+				li.bw::before {
 					background-image: url("../../media/icons/bw-style.png");
 				}
 			}
@@ -309,7 +270,7 @@ header {
 		padding: 0;
 		margin: 30px 0;
 		justify-content: center;
-		li > a {
+		> li > a {
 			display: block;
 			height: 20px;
 			width: 20px;
@@ -320,24 +281,121 @@ header {
 			margin: 0 2px;
 			transition: all 0.2s ease-in-out;
 		}
-		li > a:hover {
+		> li > a:hover {
 			background-color: rgb(60, 60, 60);
 		}
 	}
-	a#quick-portfolio-link:visited {
-		color: white;
+}
+
+#portfolio {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	> div {
+		margin: 10px 0;
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100vw;
+		overflow: hidden;
+		> h3 {
+			display: block;
+			padding: 30px 5px;
+			margin: 0 30px;
+
+			border: 1px solid white;
+			border-width: 0 1px;
+
+			/* Text */
+			text-align: center;
+			text-align: left;
+			font-size: 2rem;
+
+			/* Transform */
+			writing-mode: vertical-rl;
+			transform: rotate(-180deg);
+		}
+		> div {
+			display: flex;
+			overflow-x: auto;
+			scroll-behavior: smooth;
+			scroll-snap-type: x mandatory;
+			-webkit-overflow-scrolling: touch;
+			
+			div {
+				flex-shrink: 0;	
+				width: 20vw;
+				height: 20vw;
+				margin: 0 5px;
+				overflow: hidden;
+				border-radius: 5px;
+				>img{
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
 	}
-	a#quick-portfolio-link {
-		position: absolute;
-		right: 1vw;
-		bottom: 5%;
-		font-size: 1.4rem;
-		padding: 10px 20px;
-		text-align: right;
-		transform: translateY(-50%);
-		background-color: rgb(80, 40, 264);
-		border-radius: 5px;
-		color: white;
-		text-decoration: none;
+}
+
+/* Footer */
+hr {
+	width: 80%;
+	height: 0px;
+	border: 0;
+	margin: 70px auto;
+	background-color: white;
+	height: 1px;
+}
+footer {
+	/* Box sizes */
+	padding: 0;
+	width: 70vw;
+	margin: 0 auto;
+
+	/* Display */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: start;
+
+	/* Children */
+	> div {
+		/* Box sizes */
+		padding: 30px 60px;
+		width: max-content;
+
+		/* Display */
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: start;
+
+		/* Children */
+		div {
+			padding: 10px 0;
+		}
+
+		h3 {
+			margin: 0 0 10px 0;
+			font-size: 1.5rem;
+			font-weight: normal;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+	> div#contacts {
+		/* Children */
+		> div {
+			/* Display */
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+		}
+
+		h3 {
+			text-align: center;
+		}
 	}
 }

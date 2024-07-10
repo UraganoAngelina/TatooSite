@@ -1,0 +1,10 @@
+{
+    "type": "Resident",
+    "instagram_id": "sergentepit",
+    "styles": [
+        "Chromed",
+        "Microrealism"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}

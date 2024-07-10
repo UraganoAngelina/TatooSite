@@ -1,0 +1,10 @@
+{
+    "type": "Resident",
+    "instagram_id": "creepy_creem",
+    "styles": [
+        "Trash",
+        "Linework"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}

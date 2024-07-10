@@ -1,0 +1,9 @@
+{
+    "type": "Guest",
+    "instagram_id": "universallovetattoos",
+    "styles": [
+        "Realism"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}

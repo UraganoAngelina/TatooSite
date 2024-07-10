@@ -1,0 +1,9 @@
+{
+    "type": "Guest",
+    "instagram_id": "zarmina_tattoo",
+    "styles": [
+        "Fine Line"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}

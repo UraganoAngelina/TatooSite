@@ -1,0 +1,11 @@
+{
+    "type": "Resident",
+    "instagram_id": "louis.tamb",
+    "styles": [
+        "Dark traditional",
+        "Traditional",
+        "Geometrico"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}

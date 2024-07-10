@@ -1,0 +1,11 @@
+{
+    "type": "Resident",
+    "instagram_id": "simonecarbone_tt",
+    "styles": [
+        "Traditional",
+        "Fantasy",
+        "Custom"
+    ],
+    "alt": "aome alternative text",
+    "profile_pic": "base64_encoded_string_here"
+}
