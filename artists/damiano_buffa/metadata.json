@@ -1,19 +1,19 @@
 {
     "en": {
-        "type": "Guest",
-        "instagram_id": "zarmina_tattoo",
+        "type": "Resident",
+        "instagram_id": "damiano_buffa",
         "bio": "EN: Lorem i adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.",
         "styles": [
-            "Fine Line"
+            "Lettering"
         ],
         "alt": "EN: Some alternative text"
     },
     "it": {
-        "type": "Ospite",
-        "instagram_id": "zarmina_tattoo",
+        "type": "Residente",
+        "instagram_id": "damiano_buffa",
         "bio": "IT: Lorem i adipisci beatae odio! Ad nobis laudantium cum mollitia aut minus harum sunt fuga.",
         "styles": [
-            "Fine Line"
+            "Lettering"
         ],
         "alt": "IT: Some alternative text"
     },
