@@ -1,0 +1,37 @@
+header {
+	/* Box size */
+	height: 100vh;
+	box-sizing: border-box;
+
+	/* Background */
+	background-image: url("../../media/gifs/istock-1175896861_preview.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* Display */
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	/* Childrens */
+	h1 {
+		/* Box dimension */
+		height: 200px;
+		width: 300px;
+		margin: 0;
+
+		/* Image displacement */
+		text-indent: -9999px;
+		background-image: url("../../media/images/logo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.subtitle {
+		margin: 0;
+		font-size: 1.2rem;
+	}
+}

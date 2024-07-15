@@ -1,0 +1,132 @@
+#fast-infos {
+	/* Display */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+
+	/* Children */
+	* {
+		flex-shrink: 0;
+		transition: all 0.2s ease-in-out;
+	}
+	a#map {
+		display: block;
+		height: 400px;
+		width: 400px;
+		min-height: 300px;
+		min-width: 300px;
+		background-image: url("../../media/images/map.png");
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		/* Text */
+		text-indent: -9999px;
+
+		/* Transition */
+		transition: all 0.2s ease-in-out;
+	}
+	a#map:hover {
+		background-size: 110% 110%;
+	}
+
+	> div {
+		/* Box size */
+		height: 500px;
+		padding: 30px;
+		margin: 70px 0;
+
+		/* Display */
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: end;
+
+		/* Children */
+		h2 {
+			height: 0;
+			width: 0;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			margin: 0;
+		}
+	}
+	> div:nth-of-type(1) {
+		flex-flow: row nowrap;
+		p {
+			/* Box sizes */
+			padding: 10px;
+			margin: 0 20px;
+
+			/* Text */
+			writing-mode: vertical-rl;
+			transform: rotate(-180deg);
+
+			/* Borders */
+			border: 1px solid white;
+			border-width: 0 1px;
+		}
+	}
+	> div:nth-of-type(2) {
+		align-items: end;
+
+		div {
+			display: flex;
+			flex-flow: row nowrap;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#fast-infos {
+		/* Display */
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		a#map {
+			display: block;
+			max-height: 80vw;
+			max-width: 80vw;
+		}
+		> div {
+			/* Box size */
+			height: auto;
+			margin: 0;
+			margin-left: auto;
+		}
+		> div:nth-of-type(1) {
+			flex-flow: row nowrap;
+			p {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	#fast-infos {
+		> div {
+			width: 80vw;
+			overflow: hidden;
+			margin-left: 0;
+		}
+		> div:nth-of-type(1) {
+			flex-flow: column;
+			p {
+				/* Text */
+				writing-mode: horizontal-tb;
+				transform: none;
+				border-width: 1px 0;
+				margin: 0;
+			}
+			a#map {
+				height: 80vw;
+				width: 80vw;
+			}
+		}
+	}
+}

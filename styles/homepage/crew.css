@@ -1,0 +1,286 @@
+#crew {
+	/* Box sizes */
+	padding: 20px 0;
+
+	/* Backgrounbd */
+	background-color: white;
+	background-image: url("../../media/images/dec-line-vb.png"), url("../../media/images/dec-line-hb.png"), url("../../media/images/dec-line-vb.png"), url("../../media/images/dec-line-hb.png");
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: 95% 100%, 100% 95%, 5% 0%, 0% 10%;
+	background-size: 1px 90%, 30% 1px, 1px 90%, 30% 1px;
+
+	/* Text */
+	color: black;
+
+	/* Display */
+	position: relative;
+
+	> h2 {
+		/* Box sizes */
+		position: absolute;
+		top: 5%;
+		left: 6%;
+		background-color: white;
+		text-transform: uppercase;
+		font-size: 2rem;
+		margin: 0;
+		padding: 3px;
+	}
+	> div.scroller {
+		display: flex;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		padding: 50px 0;
+		width: 80vw;
+		margin: 0 auto;
+		> div.crew-member {
+			scroll-snap-align: center;
+			flex-shrink: 0;
+			width: 80vw;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: end;
+			padding: 50px 0;
+
+			h3 {
+				/* Display */
+				position: relative;
+				display: block;
+				padding: 30px 5px;
+				margin: 0;
+
+				border: 1px solid black;
+				border-width: 0 1px;
+
+				/* Text */
+				text-align: center;
+				text-align: left;
+				font-size: 2rem;
+
+				/* Transform */
+				writing-mode: vertical-rl;
+				transform: rotate(-180deg);
+			}
+			> div.description {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				padding: 0px 0;
+				margin: auto 0 0 0;
+				/* children */
+				p {
+					display: block;
+					padding: 5px 0;
+					width: 500px;
+					margin: 0;
+					text-align: left;
+					border: 1px solid black;
+					border-width: 0 0 1px 0;
+				}
+				img {
+					width: 500px;
+					height: 500px;
+					margin: 10px;
+					border-radius: 5px;
+				}
+				h4 {
+					margin: 0;
+					font-size: larger;
+					font-style: italic;
+				}
+			}
+			> ul.styles-array {
+				height: 100%;
+				width: min-content;
+				list-style: none;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: end;
+				align-items: center;
+				margin: 0;
+				li {
+					white-space: nowrap;
+					text-align: center;
+				}
+				li::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100px;
+
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		padding: 0;
+		margin: 30px 0;
+		justify-content: center;
+		> li > a {
+			display: block;
+			height: 20px;
+			width: 20px;
+			text-indent: -9999px;
+			background-color: rgb(30, 30, 30);
+			border-radius: 5px;
+			border-width: 1px 1px 0 0;
+			margin: 0 2px;
+			transition: all 0.2s ease-in-out;
+		}
+		> li > a:hover {
+			background-color: rgb(60, 60, 60);
+		}
+	}
+}
+
+li.traditional::before {
+	background-image: url("../../media/icons/styles/Traditional.png");
+}
+li.lettering::before {
+	background-image: url("../../media/icons/styles/Lettering.png");
+}
+li.black-work::before,
+li.black-and-white::before {
+	background-image: url("../../media/icons/styles/Black\ Work.png");
+}
+li.american-traditional::before {
+	background-image: url("../../media/icons/styles/American\ Traditional.png");
+}
+li.chromed::before {
+	background-image: url("../../media/icons/styles/Chromed.png");
+}
+li.dark-traditional::before {
+	background-image: url("../../media/icons/styles/Dark\ Traditional.png");
+}
+li.fine-line::before {
+	background-image: url("../../media/icons/styles/Fine\ Line.png");
+}
+li.geometric::before {
+	background-image: url("../../media/icons/styles/Geometric.png");
+}
+li.linework::before {
+	background-image: url("../../media/icons/styles/Line\ Work.png");
+}
+li.realism::before {
+	background-image: url("../../media/icons/styles/Realism.png");
+}
+li.surrealism::before {
+	background-image: url("../../media/icons/styles/Surrealism.png");
+}
+li.trash::before {
+	background-image: url("../../media/icons/styles/Trash.png");
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	#crew {
+		> div.scroller {
+			> div.crew-member {
+				flex-flow: column;
+				align-items: center;
+
+				h3 {
+					padding: 5px 30px;
+					border-width: 0;
+					writing-mode: horizontal-tb;
+					transform: none;
+					text-align: left;
+					width: 100%;
+					font-size: larger;
+				}
+
+				> ul.styles-array {
+					flex-flow: row nowrap;
+				}
+
+				> div.description {
+					img {
+						width: 50vw;
+						height: 50vw;
+					}
+					p {
+						width: 80vw;
+						border-width: 0;
+					}
+				}
+				> ul.styles-array {
+					margin: 10px 0 0 0;
+					width: 80vw;
+					justify-content: center;
+					flex-flow: row wrap;
+					li {
+						width: max-content;
+						margin: 0 10px;
+						font-size: small;
+					}
+					li::before {
+						height: 50px;
+					}
+				}
+			}
+		}
+		> ul {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: portrait) {
+	#crew {
+		> div.scroller {
+			> div.crew-member {
+				flex-flow: column;
+				align-items: center;
+
+				h3 {
+					padding: 5px 30px;
+					border-width: 0;
+					writing-mode: horizontal-tb;
+					transform: none;
+					text-align: left;
+					width: 100%;
+					font-size: larger;
+				}
+
+				> ul.styles-array {
+					flex-flow: row nowrap;
+				}
+
+				> div.description {
+					img {
+						width: 75vw;
+						height: 75vw;
+					}
+					p {
+						width: 80vw;
+						border-width: 0;
+					}
+				}
+				> ul.styles-array {
+					margin: 10px 0 0 0;
+					width: 80vw;
+					justify-content: center;
+					flex-flow: row wrap;
+					li {
+						width: max-content;
+						margin: 0 10px;
+						font-size: small;
+					}
+					li::before {
+						height: 50px;
+					}
+				}
+			}
+		}
+		> ul {
+			display: none;
+		}
+	}
+}

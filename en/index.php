@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="../styles/home-page.css" >
-    <link rel="stylesheet" href="../styles/icon-buttons.css" >
-    <link rel="stylesheet" href="../styles/tattoo-styles.css" >
-    
-    <link rel="stylesheet" href="../styles/scroll-bar.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/home-barrel.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
 
     <title>Ink Attitude, walk-in studio a Padova</title>
     <link rel="alternate" href="https://inkattitude.it/en/" hreflang="en">
@@ -21,7 +21,7 @@
 
 <body>
     <header>
-        <a href="https://inkattitude.it/en/" lang="it">Versione in italiano</a>
+        <a id="language-switch" class="icon it" href="../it/" lang="it">Versione in italiano</a>
         <h1>Ink Attitude</h1>
         <p class="subtitle">Walk-in <strong>tattoo studio</strong></p>
         <p class="subtitle">In <strong>Padua</strong></p>
@@ -85,8 +85,8 @@
                             </div>
                             <ul aria-label='Specialized in' class='styles-array'>
                             ";
-                                foreach ($styles as $style) echo "<li class='style " . str_replace(" ", "-", strtolower($style))  . "'>" . $style . "</li>";
-                            echo "
+                        foreach ($styles as $style) echo "<li class='style " . str_replace(" ", "-", strtolower($style))  . "'>" . $style . "</li>";
+                        echo "
                             </ul>
                         </div>";
 
@@ -113,7 +113,8 @@
         <?php
         foreach ($subfolders as $subfolder) {
 
-            $artist_ig = end(explode('/', $subfolder));
+            $exploded = explode('/', $subfolder);
+            $artist_ig = end($exploded);
             $portfolio_dir = glob($subfolder . "/*", GLOB_ONLYDIR);
 
             if (count($portfolio_dir) == 1) {
@@ -183,14 +184,13 @@
                 })
                 .then(response => response.json())
                 .then(validationResults => {
-                    // Handle the validation results
-                    console.log(validationResults);
-                    // Optionally display the results on the page
                     if (validationResults['messages'].length == 0) {
-                        console.log('okey');
                         const successMessage = document.createElement('p');
                         successMessage.innerHTML = 'This page has been successfully validated by the <a href="https://www.w3.org/" target="_blank">W3C</a> Validator.';
                         successMessage.style.fontSize = 'small';
+                        successMessage.style.width = "90vw";
+                        successMessage.style.margin = "10px auto";
+                        successMessage.style.textAlign = "center";
                         document.body.appendChild(successMessage);
                     }
                 })
