@@ -8,11 +8,3 @@
 
 @import url(./global/icon-buttons.css);
 @import url(./global/scroll-bar.css);
-
-@font-face {
-	font-family: "Cutive Mono";
-	src: url("../media/fonts/CutiveMono/CutiveMono-Regular.ttf") format("ttf"), url("../media/fonts/CutiveMono/CutiveMono-Regular.woff2") format("woff2"), url("../media/fonts/CutiveMono/CutiveMono-Regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}

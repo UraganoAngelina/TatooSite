@@ -35,6 +35,14 @@ footer {
 		p {
 			margin: 0;
 		}
+
+		ul{
+			list-style: none;
+			padding: 0;
+			li{
+				font-size: larger;
+			}
+		}
 	}
 	> div#contacts {
 		/* Children */
@@ -60,23 +68,26 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-	hr{
-		margin:20px auto;
+	hr {
+		margin: 20px auto;
 	}
-	footer{
+	footer {
 		font-size: small;
 		justify-content: start;
 		flex-flow: column nowrap;
-		> div{
+		> div {
 			padding: 20px;
 		}
 		> div#contacts {
 			> div {
 				/* Display */
 				display: flex;
-				flex-flow: column nowrap;
+				flex-flow: row nowrap;
 				justify-content: start;
 				align-items: start;
+			}
+			h3 {
+				text-align: left;
 			}
 		}
 	}
