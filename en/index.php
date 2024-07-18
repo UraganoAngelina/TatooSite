@@ -128,7 +128,7 @@
                     foreach ($files as $file) {
                         $file_path = $portfolio_dir[0] . "/" . $file;
                         if ($file !== "." && $file !== "..") {
-                            echo "<div><img src='$file_path' alt='Some work of $artist_ig'></div>";
+                            echo "<div><img src='$file_path' alt=''></div>";
                         }
                     }
                     echo " 
@@ -161,9 +161,17 @@
         </div>
         <div id="legal">
             <h3>Legal</h3>
-            <a href="./privacy-policy.html">Privacy policy</a>
-            <a href="./service-terms.html">Terms of service</a>
-            <a href="./credits.html">Credits</a>
+            <ul>
+                <li>
+                    <a href="./privacy-policy.html">Privacy policy</a>
+                </li>
+                <li>
+                    <a href="./service-terms.html">Terms of service</a>
+                </li>
+                <li>
+                    <a href="./credits.html">Credits</a>
+                </li>
+            </ul>
         </div>
     </footer>
     <hr>
